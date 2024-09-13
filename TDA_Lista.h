@@ -19,10 +19,10 @@ void insertarFront(TEnteroLargo aInsertar);
 /*Inserta un nuevo elemento al final de la lista.*/
 void insertarBack(TEnteroLargo aInsertar);
 
-/*Remueve el primer elemento de la lista. Es responsabilidad de quien lo usa liberar la memoria utilizada por el elemento*/
+/*Remueve el primer elemento de la lista. Es responsabilidad de quien lo usa liberar la memoria utilizada por el elemento retornado*/
 TEnteroLargo removeFront();
 
-/*Remueve el elemento final de la lista. Es responsabilidad de quien lo usa liberar la memoria utilizada por el elemento*/
+/*Remueve el elemento final de la lista. Es responsabilidad de quien lo usa liberar la memoria utilizada por el elemento retornado*/
 TEnteroLargo removeBack();
 
 /*Remueve todas las apariciones del elemento de la lista.*/
@@ -33,6 +33,12 @@ void removeFirst(TEnteroLargo aEliminar);
 
 /*Remueve la ultima aparicion del elemento de la lista.*/
 void removeLast(TEnteroLargo aEliminar);
+
+/*Retorna el siguiente entero largo en la lista del indicado por parametro. Retorna NULL en caso de ser el primer elemento de la lista o si no pertenece a la lista.*/
+TEnteroLargo siguiente(TEnteroLargo entero);
+
+/*Retorna el anterior entero largo en la lista del indicado por parametro. Retorna NULL en caso de ser el ultimo elemento de la listao o si no pertenece a la lista.*/
+TEnteroLargo anterior(TEnteroLargo entero);
 
 /*Busca si el elemento pertenece a la lista. Retorna TRUE si el elemento pertenece. FALSE en caso contrario.*/
 int buscar(TEnteroLargo aBuscar);

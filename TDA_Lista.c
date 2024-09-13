@@ -206,6 +206,54 @@ void removeLast(TEnteroLargo aEliminar){
     }
 }
 
+TEnteroLargo siguiente(TEnteroLargo entero){
+    if (entero != NULL){
+        TEnteroLargo salida = NULL;
+        int encontre = FALSE;
+        TNodo nav = lista;
+
+        while(!encontre && nav != NULL){
+            if (entero == nav->elem){
+                encontre = TRUE;
+            }else{
+                nav = nav->ant;
+            }
+        }
+
+        if (encontre && nav->sig != NULL){
+            salida = nav->sig->elem;
+        }
+
+        return salida;
+    }
+
+    return NULL;
+}
+
+TEnteroLargo anterior(TEnteroLargo entero){
+    if (entero != NULL){
+        TEnteroLargo salida = NULL;
+        int encontre = FALSE;
+        TNodo nav = lista;
+
+        while(!encontre && nav != NULL){
+            if (entero == nav->elem){
+                encontre = TRUE;
+            }else{
+                nav = nav->ant;
+            }
+        }
+
+        if (encontre && nav->ant != NULL){
+            salida = nav->ant->elem;
+        }
+
+        return salida;
+    }
+
+    return NULL;
+}
+
 int buscar(TEnteroLargo aBuscar){
     int esta = FALSE;
     if(aBuscar != NULL && lista != NULL){

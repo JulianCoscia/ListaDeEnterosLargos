@@ -25,7 +25,7 @@ void mostrarEnteroLargo(TEnteroLargo aMostrar);
     * 2 Error: Uno de los 2 valores es nulo. */
 int compararEnterosLargos(TEnteroLargo a, TEnteroLargo b);
 
-/*Suma las magnitudes de dos EnteroLargos y retorna su resultado.
+/*Suma las magnitudes de dos EnteroLargos y retorna su resultado. Es responsabilidad de quien lo usa liberar la memoria utilizada por el elemento retornado
     * Retorna 'X' si la suma produce overflow (resultado con mas de 100 digitos). */
 TEnteroLargo sumarEnterosLargos(TEnteroLargo a, TEnteroLargo b);
 

@@ -12,7 +12,7 @@ TEnteroLargo crearEnteroLargo(){
 }
 
 void inicializarEnteroLargo(TEnteroLargo nuevo, char* valor){
-    if (nuevo != NULL){
+    if (nuevo != NULL && valor != NULL){
         int cantDigitos = strlen(valor) -1;
         int pos = MAX_LENGTH-2;                 //Posicion del digito de menor valor del entero
         nuevo->digitos[MAX_LENGTH-1] = '\0';
